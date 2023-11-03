@@ -1,6 +1,6 @@
 import React from "react";
 
-import Loader from "../Loader/Loader";
+import Loader from "./Loader";
 import SearchResults from "./SearchResults";
 
 import "../Styles/displayInformation.css";
