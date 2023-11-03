@@ -1,31 +1,38 @@
-import { useState } from "react";
 import axios from "axios";
-import "./App.css";
+import { useState } from "react";
+
 import InputForm from "./Components/InputForm";
 import DisplayInformation from "./Components/DisplayInformation";
 
+import "./App.css";
+
 function App() {
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [searched, setSearched] = useState(false);
     const [inputText, setInputtext] = useState("");
     const [searchData, setSearchData] = useState({});
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
     const [zipCodeError, setZipCodeError] = useState({ status: false, message: "" });
 
     const handleZipCode = async () => {
         setLoading(true);
+        setError(false);
+        setSearched(true);
+
         await axios
             .get(`https://api.zippopotam.us/in/${inputText}`)
             .then((response) => {
                 setSearchData(() => response.data);
-                setLoading(false);
             })
             .catch(() => {
                 setSearchData({});
                 if (inputText.length < 6) {
+                    setSearched(false);
                     setZipCodeError((prev) => {
                         return { ...prev, status: true, message: "Zip code should be 6 digit long" };
                     });
                 } else if (isNaN(inputText)) {
+                    setSearched(false);
                     setZipCodeError((prev) => {
                         return { ...prev, status: true, message: "Invalid zip code" };
                     });
@@ -33,16 +40,17 @@ function App() {
                     setError(true);
                 }
             });
+        setLoading(false);
     };
 
     const handleClear = () => {
         setError(false);
         setInputtext("");
         setSearchData({});
+        setSearched(false);
     };
 
     const handleInput = (e) => {
-        setError(false);
         setZipCodeError((prev) => {
             return { ...prev, status: false };
         });
@@ -50,12 +58,37 @@ function App() {
     };
 
     return (
-        <div className="App">
-            <h2>ZIP Code Information App</h2>
-            <InputForm inputText={inputText} handleInput={handleInput} handleZipCode={handleZipCode} lengthError={zipCodeError} />
-            <DisplayInformation searchData={searchData} loading={loading} />
-            {error && <>No such zip code exist in databse</>}
-            <button onClick={handleClear} className="searchBtn clearBtn">clear result</button>
+        <div className="App flexColAICenter">
+            <header className="header w_100 flexCenter">
+                <div>
+                    <h2 className="title">ZIP Code Information App</h2>
+                </div>
+            </header>
+            <main className="mainBlock w_50 flexCenter">
+                <div className="inMainBlock w_100 flexColAICenter">
+                    {/* input component */}
+                    <InputForm inputText={inputText} handleInput={handleInput} handleZipCode={handleZipCode} zipCodeError={zipCodeError} />
+
+                    <div className="emptyDiv"></div>
+
+                    {searched && (
+                        <div className="infoDiv w_99 flexColAICenter">
+                            {!loading && searchData.country && (
+                                // Search Clear button
+                                <button onClick={handleClear} className="searchBtn clearBtn">
+                                    Clear
+                                </button>
+                            )}
+
+                            {/* Search Result Component */}
+                            <DisplayInformation searchData={searchData} loading={loading} />
+
+                            {/* error component */}
+                            {error && <div className="errorContainer">No such zip code exist in database, try another</div>}
+                        </div>
+                    )}
+                </div>
+            </main>
         </div>
     );
 }

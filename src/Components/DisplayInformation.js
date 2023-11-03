@@ -1,19 +1,23 @@
 import React from "react";
 
+import Loader from "../Loader/Loader";
+import SearchResults from "./SearchResults";
+
+import "../Styles/displayInformation.css";
+
 const DisplayInformation = ({ searchData, loading }) => {
     return (
-        <div
-            style={{
-                width: "50%",
-            }}
-        >
+        <div className="w_100">
             {loading ? (
-                <>Loading...</>
+                <div className="loader">
+                    <Loader />
+                    <div className="loaderTitle">Loading...</div>
+                </div>
             ) : (
                 <>
                     {searchData.country && (
                         <div className="searchRes">
-                            <h4>Result for {searchData["post code"]}</h4>
+                            <h4 className="title">Result for {searchData["post code"]}</h4>
                             <div>
                                 Post Code : <span className="boldLet">{searchData["post code"]}</span>
                             </div>
@@ -23,27 +27,12 @@ const DisplayInformation = ({ searchData, loading }) => {
                                     {searchData.country} ({searchData["country abbreviation"]})
                                 </span>
                             </div>
-                            <ul>
-                                {searchData.places.map((place) => (
-                                    <li>
-                                        <div>
-                                            Place Name : <span className="boldLet">{place["place name"]}</span>
-                                        </div>
-                                        <div>
-                                            State :
-                                            <span className="boldLet">
-                                                {place.state} ({place["state abbreviation"]})
-                                            </span>
-                                        </div>
-                                        <div>
-                                            Co-ordinates :
-                                            <span className="boldLet">
-                                                {place.latitude}, {place.longitude}
-                                            </span>
-                                        </div>
-                                    </li>
+                            <div className="resList">{searchData.places.length} places for given zip code</div>
+                            <ol>
+                                {searchData.places.map((place, index) => (
+                                    <SearchResults place={place} key={index} />
                                 ))}
-                            </ul>
+                            </ol>
                         </div>
                     )}
                 </>

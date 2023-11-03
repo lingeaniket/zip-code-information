@@ -1,0 +1,31 @@
+.App01 {
+    background-color: white;
+    border: 2px solid #1c3659;
+    border-radius: 2px;
+    display: flex;
+    height: fit-content;
+}
+
+.inputBox {
+    border: none;
+    font-size: 14px;
+    margin: 0 0 0 3px;
+    outline: none;
+    padding: 10px 15px;
+}
+
+.searchDiv {
+    background-color: #1c3659;
+    border: 2px solid white;
+    border-radius: 5px;
+    flex-direction: column;
+    height: 70px;
+    position: relative;
+}
+
+.lengthError {
+    bottom: 2px;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+}

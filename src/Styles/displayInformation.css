@@ -1,0 +1,46 @@
+.searchRes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 25px;
+}
+
+.loader {
+    display: flex;
+    height: 60px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.boldLet {
+    font-weight: 600;
+}
+
+.resList {
+    margin-top: 20px;
+}
+
+.loader001 {
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-name: loader;
+    animation-timing-function: steps(12, end);
+}
+
+.loaderFill {
+    fill: rgb(85, 85, 85);
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loaderTitle {
+    margin-top: 10px;
+}

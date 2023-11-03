@@ -1,17 +1,37 @@
 import React from "react";
 
-const InputForm = ({ inputText, handleInput, handleZipCode, lengthError }) => {
+import "../Styles/inputForm.css";
+
+const InputForm = ({ inputText, handleInput, handleZipCode, zipCodeError }) => {
+    const handlekey = (e) => {
+        if (e.key === "Enter") {
+            handleZipCode();
+        }
+    };
+
     return (
-        <div className="searchDiv">
-            <div className="App01">
+        <div className="searchDiv w_99 flexCenter">
+            <div
+                className="App01"
+                style={{
+                    border: `${zipCodeError.status ? "2px solid red" : "2px solid #1c3659"}`,
+                }}
+            >
                 <div>
-                    <input className="inputBox" type="text" placeholder="Enter 8 digit zip code" value={inputText} onChange={handleInput} />
+                    <input
+                        className="inputBox"
+                        type="text"
+                        placeholder="Enter 6 digit zip code"
+                        value={inputText}
+                        onKeyDown={handlekey}
+                        onChange={handleInput}
+                    />
                     <button className="searchBtn" onClick={handleZipCode}>
                         Search
                     </button>
                 </div>
             </div>
-            {lengthError.status && <div className="lengthError">{lengthError.message}</div>}
+            {zipCodeError.status && <div className="lengthError">{zipCodeError.message}</div>}
         </div>
     );
 };
