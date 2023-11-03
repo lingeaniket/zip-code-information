@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Welcome 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi! I'm Aniket, a **Front End Developer**. This is a **ZIP Code Information App**.
+I have created it with **React**.
+<br>
+<br>
 
-## Available Scripts
+## About ZIP Code Information App
 
-In the project directory, you can run:
+This app is helpfull for finding the places having the ZIP code. ZIP codes are usefull for post office works.
 
-### `npm start`
+## 🚀 LIVE APP
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://flipkart-clone-aniket-linge.netlify.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖥️ Tech Stack
 
-### `npm test`
+![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)&nbsp;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
 
-### `npm run build`
+-   Search ZIP Codes
+-   View Details
+-   Clear the results
+-   Error Handling
+-   Fully Responsive for phone, tablet and desktop devices
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pages & Features 👇
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   `Home Page`: Nav Bar with website name, search bar for searching places and a search button feature.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How To Use ✅
 
-### `npm run eject`
+1. After click on deployed link. You will see `home page` of website.
+2. On searchbar you can search zip codes by entering them manually.
+3. If zip code exists in database then it will appear below with infomation.
+4. If length of ssearch query is less than 6, then length error shown.
+5. If search query is not a number then `Invalid ZIP code` error is shown.
+6. You can clear the result by clicking on `Clear` button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots :camera:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   **Home Page**
+    <img src="/src/Images//Main Page.png" />
+    \_\_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   **Searching**
+    <img src="/src/Images/Searching.png"/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   **Error**
+<table>
+    <tr>
+        <td>
+            <img src="/src/Images/Error 01.png"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="/src/Images/Error 02.png"/>
+        </td>
+        <td>
+            <img src="/src/Images/Error 03.png"/>
+        </td>
+    </tr>
+</table>
