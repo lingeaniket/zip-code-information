@@ -11,7 +11,7 @@ This app is helpfull for finding the places having the ZIP code. ZIP codes are u
 
 ## 🚀 LIVE APP
 
-https://flipkart-clone-aniket-linge.netlify.app/
+https://zipcodefinder-aniket-linge.netlify.app/
 
 ## 🖥️ Tech Stack
 
