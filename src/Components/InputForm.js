@@ -11,7 +11,12 @@ const InputForm = ({ inputText, handleInput, handleZipCode, zipCodeError }) => {
 
     return (
         <div className="searchDiv w_99 flexCenter">
-            <div className="App01">
+            <div
+                className="App01"
+                style={{
+                    border: `${zipCodeError.status ? "2px solid red" : "2px solid #1c3659"}`,
+                }}
+            >
                 <div>
                     <input
                         className="inputBox"
