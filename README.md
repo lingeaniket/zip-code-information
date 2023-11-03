@@ -43,14 +43,23 @@ https://flipkart-clone-aniket-linge.netlify.app/
 -   **Home Page**
     <img src="/src/Images//Main Page.png" />
     
+---
 
 -   **Searching**
     <img src="/src/Images/Searching.png"/>
 
 ---
 
--   **Error**
-      <img src="/src/Images/Error 01.png"/>
-      <img src="/src/Images/Error 02.png"/>
-      <img src="/src/Images/Error 03.png"/>
+-   **No code Error**
+    <img src="/src/Images/Error 01.png"/>
+
+---
+
+-   **ZIP code length Error**
+    <img src="/src/Images/Error 02.png"/>
+
+---
+
+-   **ZIP code format Error**
+    <img src="/src/Images/Error 03.png"/>
       
