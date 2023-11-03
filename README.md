@@ -42,7 +42,7 @@ https://flipkart-clone-aniket-linge.netlify.app/
 
 -   **Home Page**
     <img src="/src/Images//Main Page.png" />
-    \_\_
+    
 
 -   **Searching**
     <img src="/src/Images/Searching.png"/>
@@ -50,18 +50,7 @@ https://flipkart-clone-aniket-linge.netlify.app/
 ---
 
 -   **Error**
-<table>
-    <tr>
-        <td>
-            <img src="/src/Images/Error 01.png"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="/src/Images/Error 02.png"/>
-        </td>
-        <td>
-            <img src="/src/Images/Error 03.png"/>
-        </td>
-    </tr>
-</table>
+      <img src="/src/Images/Error 01.png"/>
+      <img src="/src/Images/Error 02.png"/>
+      <img src="/src/Images/Error 03.png"/>
+      
