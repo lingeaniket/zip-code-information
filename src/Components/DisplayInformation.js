@@ -27,7 +27,9 @@ const DisplayInformation = ({ searchData, loading }) => {
                                     {searchData.country} ({searchData["country abbreviation"]})
                                 </span>
                             </div>
-                            <div className="resList">{searchData.places.length} places for given zip code</div>
+                            <div className="resList">
+                                {searchData.places.length} place{searchData.places.length === 1 ? "" : "s"} identified for given zip code
+                            </div>
                             <ol>
                                 {searchData.places.map((place, index) => (
                                     <SearchResults place={place} key={index} />
